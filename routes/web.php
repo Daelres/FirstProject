@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/contacto', function () {
+    return view('formulario');
+});
+
 Route::get('/', function () {
     echo "************** Variables y tipos de variables **************<br>";
     $name = "Daniel Restrepo";
