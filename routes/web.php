@@ -6,6 +6,12 @@ Route::get('/contacto', function () {
     return view('formulario');
 });
 
+Route::get('/contacto/store', function () {
+
+    print_r($_GET);
+    print_r($_POST);
+})-> name('contacto.store');
+
 Route::get('/', function () {
     echo "************** Variables y tipos de variables **************<br>";
     $name = "Daniel Restrepo";
