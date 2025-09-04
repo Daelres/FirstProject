@@ -15,4 +15,21 @@ Route::get('/', function () {
 
     echo $age > 18 ? "Eres mayor de edad<br>" : "Eres menor de edad<br>";
 
+    echo"************** Funcionaes **************<br>";
+
+    printUserWithCallBack(name: $name, edad: $age, callBack: function ()
+    {
+        echo "Esta es una función callback<br>";
+    });
+
 });
+
+function printUser(string $name,int $edad)
+{
+    return "El nombre del usuario es $name y su edad es $edad<br>";
+}
+
+function printUserWithCallBack(string $name,int $edad, callable $callBack){
+    echo"Soy $name y tengo $edad años<br>";
+    $callBack();
+}
