@@ -9,6 +9,10 @@ Route::get('/', function () {
     $height = 1.86;
     $islogin = true;
 
-    echo "Mi nombre es $name, tengo $age años, mido $height metros";
+    echo"************** Estructuras de control **************<br>";
+
+    echo "Mi nombre es $name, tengo $age años, mido $height metros <br>";
+
+    echo $age > 18 ? "Eres mayor de edad<br>" : "Eres menor de edad<br>";
 
 });
